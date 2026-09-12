@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy — LinkPoint Solutions</title>
+  <meta name="description" content="Cookie Policy for LinkPoint Solutions d.o.o., Sarajevo, Bosnia and Herzegovina." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .nav { background: rgba(255,255,255,.97); box-shadow: 0 1px 0 var(--gray-200); }
+    .nav-logo { color: var(--t-900); }
+    .nav-link  { color: var(--gray-600); }
+    .nav-link:hover { color: var(--t-700); background: var(--t-50); }
+    .nav-toggle span { background: var(--gray-700); }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="30" height="28" viewBox="0 0 30 28" fill="none" aria-hidden="true">
+        <circle cx="4"  cy="24" r="3.5" fill="currentColor" opacity=".75"/>
+        <circle cx="15" cy="5"  r="3.5" fill="currentColor"/>
+        <circle cx="26" cy="24" r="3.5" fill="currentColor" opacity=".75"/>
+        <polyline points="4,24 15,5 26,24" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      </svg>
+      LinkPoint
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#services"    class="nav-link">Services</a></li>
+      <li><a href="index.html#pricing"     class="nav-link">Pricing</a></li>
+      <li><a href="index.html#faq"         class="nav-link">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html#services"   class="nav-link">Services</a>
+  <a href="index.html#pricing"    class="nav-link">Pricing</a>
+  <a href="index.html#faq"        class="nav-link">FAQ</a>
+  <div class="nav-cta"><a href="index.html#contact" class="btn btn-primary btn-lg">Get Started</a></div>
+</div>
+
+<!-- Page Header -->
+<section class="legal-hero">
+  <div class="container">
+    <h1>Cookie Policy</h1>
+    <p>Last updated: 10 September 2026 &nbsp;·&nbsp; Effective: 10 September 2026</p>
+  </div>
+</section>
+
+<!-- Content -->
+<main class="section" style="padding-top:3rem;">
+  <div class="container">
+    <div class="legal-content">
+
+      <div class="info-box">
+        This Cookie Policy explains how LinkPoint Solutions d.o.o. uses cookies and
+        similar technologies on <strong>linkpointsolutions.ba</strong>. It should be read
+        alongside our <a href="privacy-policy.html">Privacy Policy</a>. By using our website,
+        you agree to our use of essential cookies. For non-essential cookies, we ask for
+        your consent via our cookie banner.
+      </div>
+
+      <h2>1. What Are Cookies?</h2>
+      <p>
+        Cookies are small text files stored on your device (computer, tablet, or mobile)
+        when you visit a website. They allow the website to recognise your device on
+        future visits and remember certain information — such as your login status or
+        preferences.
+      </p>
+      <p>
+        Similar technologies include <strong>localStorage</strong> (used by our chat widget
+        to remember session tokens), <strong>sessionStorage</strong>, and server-side session
+        identifiers stored in HTTP cookies. This policy covers all such technologies.
+      </p>
+
+      <h2>2. Why We Use Cookies</h2>
+      <p>We use cookies and similar technologies for the following purposes:</p>
+      <ul>
+        <li><strong>Essential operation</strong> — to keep you logged in, protect your session,
+            and ensure the platform functions correctly.</li>
+        <li><strong>Preference memory</strong> — to remember your cookie consent choice so
+            we don't ask repeatedly.</li>
+        <li><strong>Analytics</strong> — to understand how visitors use our website so we can
+            improve it. We use aggregate, anonymised data for this purpose.</li>
+        <li><strong>Performance</strong> — to identify and resolve technical issues.</li>
+      </ul>
+
+      <h2>3. Types of Cookies We Use</h2>
+
+      <h3>3.1 Essential Cookies</h3>
+      <p>
+        These cookies are strictly necessary for the website and platform to function. They
+        cannot be disabled without breaking core functionality. No consent is required for
+        essential cookies under applicable law.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie / Key</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>lp_session</td>
+            <td>Authenticated session token for platform users (agents, admins, partner accounts). Stored in an httpOnly cookie to prevent JavaScript access.</td>
+            <td>Session (browser close)</td>
+            <td>Essential</td>
+          </tr>
+          <tr>
+            <td>lp_consent</td>
+            <td>Records your cookie consent choice (accepted / declined) so the banner is not shown on every visit.</td>
+            <td>1 year</td>
+            <td>Essential (functional)</td>
+          </tr>
+          <tr>
+            <td>lp_widget_[token]</td>
+            <td>Stores the anonymous conversation session token for the embedded chat widget (localStorage on partner websites). Scoped to each partner's embed token.</td>
+            <td>Session / 30 days</td>
+            <td>Essential</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3.2 Analytics Cookies</h3>
+      <p>
+        These cookies help us understand how visitors use our website. All data is
+        pseudonymised and aggregated. They are only set if you <strong>accept</strong>
+        cookies via our banner.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie</th>
+            <th>Provider</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_ga</td>
+            <td>Google Analytics</td>
+            <td>Distinguishes unique visitors. Used to calculate visit, session, and campaign data for site traffic reports.</td>
+            <td>2 years</td>
+          </tr>
+          <tr>
+            <td>_ga_[ID]</td>
+            <td>Google Analytics (GA4)</td>
+            <td>Stores and counts page views.</td>
+            <td>2 years</td>
+          </tr>
+          <tr>
+            <td>_gid</td>
+            <td>Google Analytics</td>
+            <td>Distinguishes users over short periods; used in session sampling.</td>
+            <td>24 hours</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Google Analytics data is processed by Google Ireland Limited (Gordon House, Barrow
+        Street, Dublin 4, Ireland). Data may be transferred to Google servers in the United
+        States under Standard Contractual Clauses. For Google's privacy practices, see
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.
+        You can opt out of Google Analytics across all websites at
+        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">tools.google.com/dlpage/gaoptout</a>.
+      </p>
+
+      <h3>3.3 Marketing &amp; Remarketing Cookies</h3>
+      <p>
+        We do not currently use marketing or remarketing cookies. If this changes, this
+        policy will be updated and your consent will be sought before any such cookies
+        are placed.
+      </p>
+
+      <h2>4. Third-Party Cookies</h2>
+      <p>
+        Certain third-party services integrated into our platform may set their own cookies.
+        These are governed by the respective third parties' privacy policies and are not
+        under our control:
+      </p>
+      <ul>
+        <li>
+          <strong>Meta / WhatsApp</strong> — if you interact with our WhatsApp Business channel,
+          Meta may set cookies on their platform. See
+          <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">Meta's Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Vapi.ai</strong> — used for AI phone answering (where applicable). Vapi
+          processes audio transcripts on our behalf.
+        </li>
+      </ul>
+      <p>
+        Our embedded chat widget is served in a sandboxed cross-origin iframe. It does
+        <strong>not</strong> have access to cookies or data on your website's domain.
+        Communication between the widget and the host page is restricted to
+        <code>postMessage</code> with strict origin validation.
+      </p>
+
+      <h2>5. Your Choices &amp; How to Control Cookies</h2>
+
+      <h3>5.1 Cookie Banner</h3>
+      <p>
+        When you first visit our website, a cookie banner appears at the bottom of the screen.
+        You can accept or decline non-essential cookies. Your choice is saved for 1 year.
+        You may change your preference at any time by clearing your browser's localStorage
+        for our domain, which will re-display the banner.
+      </p>
+
+      <h3>5.2 Browser Settings</h3>
+      <p>
+        Most browsers allow you to refuse cookies or delete them. To do so, refer to your
+        browser's help documentation:
+      </p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+        <li><a href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+        <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Apple Safari</a></li>
+      </ul>
+      <p>
+        Please note: disabling essential cookies may prevent you from logging in or using
+        the platform. Disabling analytics cookies will not affect your ability to use the
+        website.
+      </p>
+
+      <h3>5.3 Do Not Track</h3>
+      <p>
+        Some browsers send a "Do Not Track" (DNT) signal. We honour the DNT signal by
+        not activating analytics cookies when it is detected.
+      </p>
+
+      <h2>6. Legal Basis (Bosnia and Herzegovina)</h2>
+      <p>
+        Bosnia and Herzegovina does not yet have a dedicated e-Privacy / cookie directive.
+        As an EU candidate country, we voluntarily align our cookie practices with the
+        EU ePrivacy Directive and the General Data Protection Regulation (GDPR) standards:
+      </p>
+      <ul>
+        <li>Essential cookies: <strong>legitimate interests / necessity for service</strong>
+            — no consent required.</li>
+        <li>Analytics cookies: <strong>consent</strong> — only placed after you accept via
+            our cookie banner.</li>
+      </ul>
+      <p>
+        The processing of any personal data contained within cookies is also governed by
+        the <strong>Law on Protection of Personal Data of Bosnia and Herzegovina</strong>
+        (Official Gazette 49/06, 76/11, 89/11). See our
+        <a href="privacy-policy.html">Privacy Policy</a> for full details of your rights.
+      </p>
+
+      <h2>7. Updates to This Policy</h2>
+      <p>
+        We may update this Cookie Policy when we add or remove cookies, or when the law
+        requires it. The "Last updated" date at the top of this page will reflect the most
+        recent changes. Significant changes will be communicated via a renewed consent
+        banner.
+      </p>
+
+      <h2>8. Contact Us</h2>
+      <p>
+        If you have questions about our use of cookies or this policy, please contact us:
+      </p>
+      <div class="info-box">
+        <strong>LinkPoint Solutions d.o.o.</strong><br>
+        Ferhadija 1, 71000 Sarajevo, Bosnia and Herzegovina<br>
+        Email: <a href="mailto:privacy@linkpointsolutions.ba">privacy@linkpointsolutions.ba</a>
+      </div>
+      <p>
+        For complaints about data protection, you may also contact the supervisory authority:
+        <strong>Agencija za zaštitu ličnih podataka BiH (AZLP)</strong>,
+        Dubrovačka 6, 71000 Sarajevo — <a href="mailto:info@azlp.ba">info@azlp.ba</a> —
+        <a href="https://www.azlp.ba" target="_blank" rel="noopener noreferrer">www.azlp.ba</a>.
+      </p>
+
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);">
+      <span>© 2026 LinkPoint Solutions d.o.o. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="index.html">Back to Website</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var drawer = document.getElementById('navDrawer');
+  if (toggle && drawer) {
+    toggle.addEventListener('click', function () {
+      var open = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+}());
+</script>
+</body>
+</html>

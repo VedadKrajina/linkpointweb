@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkPoint Solutions — AI-Powered Customer Support & BPO</title>
+  <meta name="description" content="LinkPoint delivers a hybrid AI + human BPO platform — fully managed customer support across web chat, WhatsApp, and phone. Based in Bosnia and Herzegovina, serving clients across Europe." />
+  <meta name="keywords" content="BPO, customer support, AI customer support, human agents, WhatsApp integration, Bosnia Herzegovina" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LinkPoint Solutions — AI-Powered Customer Support" />
+  <meta property="og:description" content="Hybrid AI + human customer support, fully managed. One line of code on your website." />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Fonts: Bricolage Grotesque (display) + Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="v2-warm.css" />
+</head>
+<body>
+
+<!-- ── Cookie Consent Banner ─────────────────────────────── -->
+<div class="cookie-bar" id="cookieBar" role="complementary" aria-label="Cookie consent">
+  <p class="cookie-text">
+    We use cookies to improve your experience and analyse site traffic.
+    See our <a href="cookie-policy.html">Cookie Policy</a> and
+    <a href="privacy-policy.html">Privacy Policy</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="c-btn c-accept" id="cookieAccept">Accept</button>
+    <button class="c-btn c-decline" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
+<!-- ── Navigation ────────────────────────────────────────── -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="v2-warm.html" class="nav-logo" aria-label="LinkPoint Solutions home">
+      <svg width="30" height="28" viewBox="0 0 30 28" fill="none" aria-hidden="true">
+        <circle cx="4"  cy="24" r="3.5" fill="currentColor" opacity=".75"/>
+        <circle cx="15" cy="5"  r="3.5" fill="currentColor"/>
+        <circle cx="26" cy="24" r="3.5" fill="currentColor" opacity=".75"/>
+        <polyline points="4,24 15,5 26,24" stroke="currentColor" stroke-width="2.2"
+                  stroke-linejoin="miter" fill="none"/>
+      </svg>
+      LinkPoint
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+      <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="#services"      class="nav-link">Services</a>
+  <a href="#how-it-works"  class="nav-link">How It Works</a>
+  <a href="#pricing"       class="nav-link">Pricing</a>
+  <a href="#faq"           class="nav-link">FAQ</a>
+  <div class="nav-cta"><a href="#contact" class="btn btn-primary btn-lg">Get Started</a></div>
+</div>
+
+<!-- ── Wave Header ────────────────────────────────────────── -->
+<header class="wave-header" aria-label="LinkPoint Solutions">
+  <canvas id="heroWave" aria-hidden="true"></canvas>
+  <div class="wave-logo-wrap">
+    <div class="wave-logo-glass">
+      <img src="logo.png" alt="LinkPoint Solutions" class="wave-logo-img" />
+    </div>
+  </div>
+</header>
+
+<!-- ── Hero Content ───────────────────────────────────────── -->
+<section class="hero-below" id="home" aria-label="Hero">
+  <div class="container hero-below-inner">
+
+    <div class="hero-badge">
+      <span class="badge-pulse" aria-hidden="true"></span>
+      AI-Powered BPO Platform
+    </div>
+
+    <h1>Smarter Customer Support,<br><em>Fully Managed</em></h1>
+
+    <p class="hero-lead">
+      LinkPoint blends <strong>Claude AI</strong> with expert human agents to handle
+      every customer interaction — across web chat, WhatsApp, and phone —
+      so your team can focus on what matters most.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-primary btn-lg">See Plans &amp; Pricing</a>
+      <a href="#how-it-works" class="btn btn-outline btn-lg">How It Works</a>
+    </div>
+
+    <div class="hero-proof">
+      <span>Based in Sarajevo, BiH</span>
+      <span class="hero-proof-sep" aria-hidden="true"></span>
+      <span>EU-aligned compliance</span>
+      <span class="hero-proof-sep" aria-hidden="true"></span>
+      <span>Live in under 24 hours</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── Value Bar ──────────────────────────────────────────── -->
+<section class="value-bar" aria-label="Key benefits">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="value-text">80%+</div>
+        <div class="value-sub">Resolved automatically by AI</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="value-text">24/7</div>
+        <div class="value-sub">Always on, zero downtime</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="value-text">12+</div>
+        <div class="value-sub">Languages supported</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-text">100%</div>
+        <div class="value-sub">EU-aligned &amp; compliant</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Services ───────────────────────────────────────────── -->
+<section class="section" id="services" aria-label="Services">
+  <div class="container">
+    <p class="label">What We Do</p>
+    <h2>End-to-end support,<br>from first message to resolution</h2>
+    <p class="section-lead">
+      We combine proprietary AI with trained human agents to handle your customer
+      communications across every channel — fully white-labelled under your brand.
+    </p>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="9" y="9" width="6" height="6" rx="1"/>
+            <path d="M15 2v3M9 2v3M15 19v3M9 19v3M22 9h-3M5 9H2M22 15h-3M5 15H2"/>
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+          </svg>
+        </div>
+        <h3>AI Customer Support</h3>
+        <p>Our Claude-powered AI is trained on your product knowledge base and resolves
+           routine queries instantly — 24/7, with no wait times and consistent accuracy.</p>
+        <div class="service-arrow">
+          Learn more
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+          </svg>
+        </div>
+        <h3>Human Agent Teams</h3>
+        <p>When complexity demands empathy and expertise, our trained multilingual agents
+           step in — escalating seamlessly from AI, maintaining your brand voice throughout.</p>
+        <div class="service-arrow">
+          Learn more
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <h3>Omnichannel Inbox</h3>
+        <p>Web chat, WhatsApp Business, and AI phone answering — all routed into
+           one unified inbox. One platform, every channel, zero silos.</p>
+        <div class="service-arrow">
+          Learn more
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-delay-3">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3>Back Office Operations</h3>
+        <p>Ticket management, internal scheduling, HR documents, payroll views,
+           and team accounting — all behind a role-based portal your staff actually enjoy using.</p>
+        <div class="service-arrow">
+          Learn more
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── How It Works ───────────────────────────────────────── -->
+<section class="section hiw" id="how-it-works" aria-label="How it works">
+  <div class="container">
+    <p class="label">Process</p>
+    <h2>Up and running in three steps</h2>
+    <p class="section-lead">
+      No lengthy onboarding. No enterprise IT projects. You can have a live,
+      AI-powered support channel embedded on your website within 24 hours.
+    </p>
+
+    <div class="hiw-grid">
+
+      <div class="hiw-step reveal">
+        <div class="step-num" aria-hidden="true">01</div>
+        <h3>Set Up Your Profile</h3>
+        <p>We create your partner profile on the platform, configure your knowledge base
+           (FAQ, product docs, common issues), and set your AI preferences and escalation
+           rules to match your workflows.</p>
+      </div>
+
+      <div class="hiw-step reveal reveal-delay-1">
+        <div class="step-num" aria-hidden="true">02</div>
+        <h3>Embed the Widget</h3>
+        <p>Your team pastes a single <code style="font-size:.85em;background:var(--t-50);padding:.1em .35em;border-radius:3px;color:var(--t-700);">&lt;script&gt;</code> tag.
+           A fully branded chat bubble appears on your site instantly — isolated, secure,
+           and cross-origin sandboxed.</p>
+      </div>
+
+      <div class="hiw-step reveal reveal-delay-2">
+        <div class="step-num" aria-hidden="true">03</div>
+        <h3>We Handle the Rest</h3>
+        <p>AI resolves routine queries in seconds. Complex or high-value conversations are
+           flagged and handed to human agents — who can also take live calls via AI phone
+           transcription and callback queues.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Features ───────────────────────────────────────────── -->
+<section class="section features-section" aria-label="Features">
+  <div class="container">
+    <div class="features-inner">
+
+      <div>
+        <p class="label">Platform Capabilities</p>
+        <h2>Everything you need,<br>nothing you don't</h2>
+        <p class="section-lead" style="margin-bottom:0;">
+          Built from the ground up for BPO and customer success teams. Every feature
+          serves a purpose — no bloat, no forced upgrades, no locked-in add-ons.
+        </p>
+      </div>
+
+      <div class="features-list">
+
+        <div class="feature-chip reveal">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Claude AI knowledge base (RAG)</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-1">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Smart human escalation</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-2">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Conversation flagging &amp; tagging</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-3">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">WhatsApp Business integration</span>
+        </div>
+
+        <div class="feature-chip reveal">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">AI phone answering (Vapi)</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-1">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Real-time agent inbox</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-2">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Partner dashboard &amp; reports</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-3">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">One-line embed widget</span>
+        </div>
+
+        <div class="feature-chip reveal">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Role-based access control</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-1">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Audit trail &amp; call recordings</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-2">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">Multi-language support</span>
+        </div>
+
+        <div class="feature-chip reveal reveal-delay-3">
+          <div class="chip-check" aria-hidden="true">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="chip-text">API &amp; webhook access</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Pricing ────────────────────────────────────────────── -->
+<section class="section pricing-bg" id="pricing" aria-label="Pricing">
+  <div class="container">
+    <p class="label">Pricing</p>
+    <h2>Transparent pricing,<br>no hidden fees</h2>
+    <p class="section-lead">
+      All plans include platform access, widget embed, and real-time reporting.
+      Human agents are included from Growth onwards.
+    </p>
+
+    <div class="pricing-grid">
+
+      <!-- Starter -->
+      <div class="plan-card reveal">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">€299<sub>/mo</sub></div>
+        <p class="plan-desc">For small businesses wanting AI-first support without the overhead of a full team.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 partner integration</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI-only web chat support</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 2,000 conversations/mo</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Knowledge base (1 document)</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Partner dashboard</li>
+          <li class="plan-feature dim"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Human agent escalation</li>
+          <li class="plan-feature dim"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>WhatsApp integration</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Start Free Trial</a>
+      </div>
+
+      <!-- Growth (highlighted) -->
+      <div class="plan-card highlighted reveal reveal-delay-1">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-price">€799<sub>/mo</sub></div>
+        <p class="plan-desc">For growing companies that need the reliability of human agents alongside AI.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 partner integrations</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI + 3 dedicated human agents</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 10,000 conversations/mo</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited knowledge base</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp Business channel</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Conversation flagging &amp; tagging</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Priority email &amp; chat support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Start Free Trial</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="plan-card reveal reveal-delay-2">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price" style="font-size:2.25rem;padding-top:.25rem;">Custom</div>
+        <p class="plan-desc">For organisations with high volumes, dedicated teams, and SLA requirements.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited partner integrations</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated AI + human team</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited conversations</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI phone answering (Vapi)</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom API &amp; webhook access</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Guaranteed SLA</li>
+          <li class="plan-feature"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Contact Sales</a>
+      </div>
+
+    </div>
+
+    <p class="pricing-note">
+      All prices exclusive of VAT. Need something different?
+      <a href="mailto:hello@linkpointsolutions.ba">Talk to our team</a> — we'll build a plan that fits.
+    </p>
+  </div>
+</section>
+
+
+<!-- ── FAQ ────────────────────────────────────────────────── -->
+<section class="section" id="faq" aria-label="Frequently asked questions">
+  <div class="container">
+    <p class="label">FAQ</p>
+    <h2>Common questions</h2>
+
+    <div class="faq-wrap">
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">How does your AI handle customer questions?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">We use Anthropic's Claude model, trained on your uploaded knowledge base — your FAQs, product documentation, and common technical problems with solutions. When a customer sends a message, Claude retrieves relevant context, drafts a reply, and applies a confidence threshold. High-confidence answers are sent automatically; low-confidence queries are escalated to a human agent.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">Can the AI be switched off for specific clients?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">Yes. Every partner company has an individual AI toggle on the platform. Admins can enable or disable AI at any time without affecting other partners. When AI is off, all conversations route directly to human agents.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">What happens when AI can't resolve a query?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">The AI informs the customer politely that a specialist will follow up, then creates a ticket in our agent inbox. The assigned human agent receives full conversation context and can continue the conversation or — if it was a phone call — schedule a callback during business hours.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">How does the WhatsApp integration work?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">We connect to the Meta WhatsApp Cloud API using your verified Business Account. Inbound customer messages flow into the same unified inbox as web chat. Service conversations (customer-initiated within 24 hours) are free on Meta's infrastructure. Template messages (outbound notifications) are charged at Meta's standard rates per category and country.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">Is customer data secure and compliant?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">Yes. All data is encrypted in transit (TLS 1.2+) and at rest. We operate under the Law on Protection of Personal Data of Bosnia and Herzegovina (Official Gazette 49/06, 76/11, 89/11), which follows EU Directive 95/46/EC principles. The platform uses cross-origin sandboxed iframes with no <code>allow-same-origin</code> so your customers' conversation data cannot be accessed by the host page.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">How long does onboarding take?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">For most clients, the platform is live within one business day. We create your partner profile, ingest your knowledge base, and generate your embed snippet — which your team pastes into your website's HTML. WhatsApp and phone integrations require Meta Business verification and Vapi configuration, which typically adds 3–5 business days.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details class="faq-details">
+          <summary class="faq-summary">Are there long-term contracts?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">No. All plans are billed monthly and can be cancelled at any time with 30 days' notice. Enterprise clients may negotiate annual pricing for a discount. There are no setup fees and no lock-in penalties.</p>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA Section ────────────────────────────────────────── -->
+<section class="cta-section" aria-label="Call to action">
+  <div class="container">
+    <h2>Ready to transform your<br>customer experience?</h2>
+    <p>Start with a free 14-day trial — no credit card required, no commitments.
+       Our team will handle the setup.</p>
+    <div class="cta-actions">
+      <a href="mailto:hello@linkpointsolutions.ba" class="btn btn-amber btn-lg">Start Free Trial</a>
+      <a href="mailto:hello@linkpointsolutions.ba" class="btn btn-ghost btn-lg">Schedule a Demo</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <svg width="26" height="24" viewBox="0 0 30 28" fill="none" aria-hidden="true">
+            <circle cx="4"  cy="24" r="3.5" fill="currentColor" opacity=".7"/>
+            <circle cx="15" cy="5"  r="3.5" fill="currentColor"/>
+            <circle cx="26" cy="24" r="3.5" fill="currentColor" opacity=".7"/>
+            <polyline points="4,24 15,5 26,24" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+          </svg>
+          LinkPoint Solutions
+        </div>
+        <p class="footer-desc">
+          AI-powered customer support and BPO services, fully managed. Serving businesses
+          across Europe from our base in Sarajevo, Bosnia and Herzegovina.
+        </p>
+        <address class="footer-address" style="font-style:normal;">
+          Ferhadija 1, 71000 Sarajevo<br>
+          Bosnia and Herzegovina<br>
+          <a href="mailto:hello@linkpointsolutions.ba">hello@linkpointsolutions.ba</a>
+        </address>
+      </div>
+
+      <div>
+        <div class="footer-col-head">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services" class="footer-link">AI Customer Support</a></li>
+          <li><a href="#services" class="footer-link">Human Agent Teams</a></li>
+          <li><a href="#services" class="footer-link">Omnichannel Inbox</a></li>
+          <li><a href="#services" class="footer-link">Back Office BPO</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-head">Company</div>
+        <ul class="footer-links">
+          <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+          <li><a href="#pricing" class="footer-link">Pricing</a></li>
+          <li><a href="#faq" class="footer-link">FAQ</a></li>
+          <li><a href="mailto:hello@linkpointsolutions.ba" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-head">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html"  class="footer-link">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 LinkPoint Solutions d.o.o. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Scripts ────────────────────────────────────────────── -->
+<script src="wave.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+
+  var toggle = document.getElementById('navToggle');
+  var drawer = document.getElementById('navDrawer');
+  if (toggle && drawer) {
+    toggle.addEventListener('click', function () {
+      var open = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        drawer.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  var bar     = document.getElementById('cookieBar');
+  var accept  = document.getElementById('cookieAccept');
+  var decline = document.getElementById('cookieDecline');
+  if (bar) {
+    if (localStorage.getItem('lp_consent')) bar.classList.add('hide');
+    if (accept) accept.addEventListener('click', function () { localStorage.setItem('lp_consent', 'accepted'); bar.classList.add('hide'); });
+    if (decline) decline.addEventListener('click', function () { localStorage.setItem('lp_consent', 'declined'); bar.classList.add('hide'); });
+  }
+
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+}());
+</script>
+</body>
+</html>
