@@ -757,35 +757,56 @@ p  { max-width: 66ch; }
 .chip-text { font-size: .875rem; font-weight: 500; color: rgba(255,255,255,.70); line-height: 1.4; }
 
 /* ── 13. Contact Form ──────────────────────────────────────── */
-.contact-section { background: var(--bg-page); transition: background .3s var(--ease); }
+.contact-section {
+  background: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+  transition: background .3s var(--ease);
+}
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bdr-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bdr-subtle) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+}
 
 .contact-inner {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
   align-items: start;
+  position: relative;
+}
+
+/* Left — info */
+.contact-info .section-lead {
+  margin-top: 1.25rem;
+  max-width: 36ch;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: .25rem;
+  gap: 0;
+  margin-top: 2.75rem;
+  border-top: 1px solid var(--bdr-base);
 }
 .contact-detail {
   display: flex;
-  align-items: flex-start;
-  gap: .875rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.125rem 0;
+  border-bottom: 1px solid var(--bdr-base);
 }
 .contact-detail-icon {
-  width: 44px; height: 44px;
-  background: var(--bg-accent);
-  border: 1px solid var(--bdr-base);
-  border-radius: var(--radius);
+  width: 36px; height: 36px;
   display: flex; align-items: center; justify-content: center;
-  color: var(--t-600);
+  color: var(--t-500);
   flex-shrink: 0;
-  transition: background .3s var(--ease), border-color .3s var(--ease);
 }
 [data-theme="dark"] .contact-detail-icon { color: var(--t-400); }
 .contact-detail-label {
@@ -793,60 +814,81 @@ p  { max-width: 66ch; }
   font-family: var(--ff-head);
   font-size: .68rem;
   font-weight: 700;
-  letter-spacing: .10em;
+  letter-spacing: .09em;
   text-transform: uppercase;
   color: var(--fg-faint);
   margin-bottom: .2rem;
+  transition: color .3s var(--ease);
 }
 .contact-detail-value {
   display: block;
   font-size: .9375rem;
-  color: var(--fg-base);
+  color: var(--fg-strong);
   font-weight: 500;
   transition: color .3s var(--ease);
 }
-a.contact-detail-value { color: var(--t-600); transition: color var(--dur); }
-a.contact-detail-value:hover { color: var(--t-700); }
+a.contact-detail-value { color: var(--t-600); text-decoration: none; transition: color var(--dur); }
+a.contact-detail-value:hover { color: var(--t-500); }
 [data-theme="dark"] a.contact-detail-value { color: var(--t-400); }
 
-/* Form card */
+/* Right — form card */
 .contact-form {
   background: var(--bg-card);
-  border: 1.5px solid var(--bdr-base);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--bdr-base);
+  border-radius: 18px;
+  padding: 2.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px rgba(0,0,0,.05),
+    0 8px 32px rgba(0,0,0,.07),
+    0 24px 64px rgba(0,0,0,.04);
   transition: background .3s var(--ease), border-color .3s var(--ease);
+}
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--t-400), var(--t-600), var(--t-400));
+  background-size: 200% 100%;
+}
+[data-theme="dark"] .contact-form {
+  box-shadow:
+    0 1px 3px rgba(0,0,0,.2),
+    0 8px 32px rgba(0,0,0,.25),
+    0 0 0 1px rgba(255,255,255,.05) inset;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  gap: 1.125rem;
+  margin-bottom: 1.125rem;
 }
-.form-group { display: flex; flex-direction: column; gap: .375rem; }
-.form-group-full { margin-bottom: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: .4rem; }
+.form-group-full { margin-bottom: 1.125rem; }
 
 .form-label {
   font-family: var(--ff-head);
-  font-size: .8125rem;
-  font-weight: 600;
+  font-size: .72rem;
+  font-weight: 700;
   color: var(--fg-strong);
-  letter-spacing: .01em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
   transition: color .3s var(--ease);
 }
 .form-label span { color: var(--t-500); }
 
 .form-input {
   width: 100%;
-  padding: .75rem 1rem;
+  padding: .8125rem 1.0625rem;
   font-family: var(--ff-body);
   font-size: .9375rem;
   color: var(--fg-strong);
   background: var(--input-bg);
   border: 1.5px solid var(--bdr-base);
-  border-radius: var(--radius);
+  border-radius: 10px;
   outline: none;
   transition:
     border-color var(--dur),
@@ -860,9 +902,17 @@ a.contact-detail-value:hover { color: var(--t-700); }
 .form-input:focus {
   border-color: var(--t-400);
   background: var(--bg-card);
-  box-shadow: 0 0 0 3px rgba(20,184,166,.12);
+  box-shadow: 0 0 0 4px rgba(20,184,166,.11);
 }
-[data-theme="dark"] .form-input:focus { box-shadow: 0 0 0 3px rgba(45,212,191,.15); }
+[data-theme="dark"] .form-input {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.09);
+}
+[data-theme="dark"] .form-input:focus {
+  border-color: var(--t-400);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 0 0 4px rgba(45,212,191,.13);
+}
 
 .form-select {
   cursor: pointer;
@@ -872,26 +922,30 @@ a.contact-detail-value:hover { color: var(--t-700); }
   padding-right: 2.5rem;
 }
 
-.form-textarea { resize: vertical; min-height: 130px; line-height: 1.65; }
+.form-textarea { resize: vertical; min-height: 136px; line-height: 1.7; }
 
 .form-actions {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 }
-.form-note { font-size: .8125rem; color: var(--fg-faint); transition: color .3s var(--ease); }
+.form-note {
+  font-size: .8125rem;
+  color: var(--fg-faint);
+  transition: color .3s var(--ease);
+}
 
 .form-success {
   display: flex;
   align-items: center;
   gap: .625rem;
   margin-top: 1.25rem;
-  padding: .875rem 1.125rem;
+  padding: 1rem 1.25rem;
   background: var(--bg-accent);
   border: 1px solid var(--t-200);
-  border-radius: var(--radius);
+  border-radius: 10px;
   color: var(--t-700);
   font-size: .9375rem;
   font-weight: 500;
