@@ -833,16 +833,16 @@ a.contact-detail-value:hover { color: var(--t-500); }
 
 /* Right — form card */
 .contact-form {
-  background: var(--bg-card);
-  border: 1px solid var(--bdr-base);
+  background: #ffffff;
+  border: 1.5px solid #E2E8F0;
   border-radius: 18px;
   padding: 2.75rem;
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 1px 3px rgba(0,0,0,.05),
-    0 8px 32px rgba(0,0,0,.07),
-    0 24px 64px rgba(0,0,0,.04);
+    0 2px 8px rgba(0,0,0,.07),
+    0 12px 40px rgba(0,0,0,.10),
+    0 32px 80px rgba(0,0,0,.05);
   transition: background .3s var(--ease), border-color .3s var(--ease);
 }
 .contact-form::before {
@@ -1178,6 +1178,8 @@ details[open] .faq-icon {
   .value-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
   .value-item:nth-child(odd)      { border-right: 1px solid rgba(255,255,255,.07); }
   .value-item:nth-last-child(-n+2){ border-bottom: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 2rem; }
 }
 
 @media (max-width: 600px) {
