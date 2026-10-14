@@ -834,30 +834,23 @@ a.contact-detail-value:hover { color: var(--t-500); }
 /* Right — form card */
 .contact-form {
   background: #ffffff;
-  border: 1.5px solid #E2E8F0;
+  border: 1.5px solid #CBD5E1;
+  border-top: 3px solid var(--t-500);
   border-radius: 18px;
   padding: 2.75rem;
   position: relative;
-  overflow: hidden;
   box-shadow:
-    0 2px 8px rgba(0,0,0,.07),
-    0 12px 40px rgba(0,0,0,.10),
-    0 32px 80px rgba(0,0,0,.05);
+    0 4px 16px rgba(0,0,0,.08),
+    0 16px 48px rgba(0,0,0,.10);
   transition: background .3s var(--ease), border-color .3s var(--ease);
 }
-.contact-form::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--t-400), var(--t-600), var(--t-400));
-  background-size: 200% 100%;
-}
 [data-theme="dark"] .contact-form {
+  background: var(--bg-card);
+  border-color: rgba(255,255,255,.10);
+  border-top-color: var(--t-500);
   box-shadow:
-    0 1px 3px rgba(0,0,0,.2),
-    0 8px 32px rgba(0,0,0,.25),
-    0 0 0 1px rgba(255,255,255,.05) inset;
+    0 4px 16px rgba(0,0,0,.25),
+    0 16px 48px rgba(0,0,0,.30);
 }
 
 .form-row {
@@ -1164,6 +1157,8 @@ details[open] .faq-icon {
   .hiw-grid::before { display: none; }
   .features-inner { gap: 3rem; }
   .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 2rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
