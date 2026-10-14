@@ -22,9 +22,9 @@
      The lighter band is visible between the two wave lines. */
   var LAYERS = [
     /* Layer 1 — bright teal, lower (behind). Low n = big low-poly facets. */
-    { y: 0.74, a: 0.18, f: 2.1, spd: 0.70, ph: 0.00, n: 6, fill: '#2DD4BF', lc: 'rgba(13,148,136,0.85)', dc: '#0D9488', dr: 5   },
+    { y: 0.82, a: 0.09, f: 2.1, spd: 0.70, ph: 0.00, n: 6, fill: '#2DD4BF', lc: 'rgba(13,148,136,0.85)', dc: '#0D9488', dr: 5   },
     /* Layer 2 — mid teal, higher (in front). Even fewer points. */
-    { y: 0.40, a: 0.15, f: 1.8, spd: 0.52, ph: 2.09, n: 5, fill: '#0D9488', lc: 'rgba(4,60,54,0.85)',    dc: '#064E48', dr: 4.5 },
+    { y: 0.45, a: 0.15, f: 1.8, spd: 0.52, ph: 2.09, n: 5, fill: '#0D9488', lc: 'rgba(4,60,54,0.85)',    dc: '#064E48', dr: 4.5 },
   ];
 
   function resize() {

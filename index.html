@@ -6,18 +6,17 @@
   <title>LinkPoint Solutions — AI-Powered Customer Support & BPO</title>
   <meta name="description" content="LinkPoint delivers a hybrid AI + human BPO platform — fully managed customer support across web chat, WhatsApp, and phone. Based in Bosnia and Herzegovina, serving clients across Europe." />
   <meta name="keywords" content="BPO, customer support, AI customer support, human agents, WhatsApp integration, Bosnia Herzegovina" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="LinkPoint Solutions — AI-Powered Customer Support" />
   <meta property="og:description" content="Hybrid AI + human customer support, fully managed. One line of code on your website." />
   <meta property="og:locale" content="en_GB" />
 
-  <!-- Fonts: Bricolage Grotesque (display) + Jost (body) -->
+  <!-- Anti-FOUC: restore saved theme before paint -->
+  <script>(function(){var t=localStorage.getItem('lp_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}());</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -39,23 +38,26 @@
 <nav class="nav" id="mainNav" aria-label="Main navigation">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo" aria-label="LinkPoint Solutions home">
-      <!-- Logo mark: 3 nodes connected by straight lines (mirrors the wave) -->
       <svg width="30" height="28" viewBox="0 0 30 28" fill="none" aria-hidden="true">
         <circle cx="4"  cy="24" r="3.5" fill="currentColor" opacity=".75"/>
         <circle cx="15" cy="5"  r="3.5" fill="currentColor"/>
         <circle cx="26" cy="24" r="3.5" fill="currentColor" opacity=".75"/>
-        <polyline points="4,24 15,5 26,24" stroke="currentColor" stroke-width="2.2"
-                  stroke-linejoin="miter" fill="none"/>
+        <polyline points="4,24 15,5 26,24" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
       </svg>
       LinkPoint
     </a>
 
     <ul class="nav-links" role="list">
-      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#services"     class="nav-link">Services</a></li>
       <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-      <li><a href="#pricing" class="nav-link">Pricing</a></li>
-      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#faq"          class="nav-link">FAQ</a></li>
+      <li><a href="#contact"      class="nav-link">Contact</a></li>
     </ul>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-moon" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
 
     <div class="nav-cta">
       <a href="#contact" class="btn btn-primary">Get Started</a>
@@ -69,24 +71,32 @@
 
 <!-- Mobile drawer -->
 <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-  <a href="#services"      class="nav-link">Services</a>
-  <a href="#how-it-works"  class="nav-link">How It Works</a>
-  <a href="#pricing"       class="nav-link">Pricing</a>
-  <a href="#faq"           class="nav-link">FAQ</a>
+  <a href="#services"     class="nav-link">Services</a>
+  <a href="#how-it-works" class="nav-link">How It Works</a>
+  <a href="#faq"          class="nav-link">FAQ</a>
+  <a href="#contact"      class="nav-link">Contact</a>
   <div class="nav-cta"><a href="#contact" class="btn btn-primary btn-lg">Get Started</a></div>
 </div>
 
-<!-- ── Wave Header (top of page, with logo) ──────────────── -->
+<!-- ── Wave Header ────────────────────────────────────────── -->
 <header class="wave-header" aria-label="LinkPoint Solutions">
   <canvas id="heroWave" aria-hidden="true"></canvas>
   <div class="wave-logo-wrap">
     <div class="wave-logo-glass">
-      <img src="logo.png" alt="LinkPoint Solutions" class="wave-logo-img" />
+      <div class="wave-logo-wordmark" aria-label="LinkPoint Solutions">
+        <svg width="38" height="34" viewBox="0 0 30 28" fill="none" aria-hidden="true">
+          <circle cx="4"  cy="24" r="3.5" fill="white" opacity=".80"/>
+          <circle cx="15" cy="5"  r="3.5" fill="white"/>
+          <circle cx="26" cy="24" r="3.5" fill="white" opacity=".80"/>
+          <polyline points="4,24 15,5 26,24" stroke="white" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+        </svg>
+        <span>LinkPoint Solutions</span>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- ── Hero Content (white bg below wave) ────────────────── -->
+<!-- ── Hero Content ───────────────────────────────────────── -->
 <section class="hero-below" id="home" aria-label="Hero">
   <div class="container hero-below-inner">
 
@@ -104,7 +114,7 @@
     </p>
 
     <div class="hero-actions">
-      <a href="#pricing" class="btn btn-primary btn-lg">See Plans &amp; Pricing</a>
+      <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
       <a href="#how-it-works" class="btn btn-outline btn-lg">How It Works</a>
     </div>
 
@@ -126,35 +136,31 @@
     <div class="value-grid">
       <div class="value-item">
         <div class="value-icon" aria-hidden="true">
-          <!-- Bolt -->
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <div class="value-text">Resolves 80%+ automatically</div>
-        <div class="value-sub">via Claude AI</div>
+        <div class="value-text">80%+</div>
+        <div class="value-sub">Resolved automatically by AI</div>
       </div>
       <div class="value-item">
         <div class="value-icon" aria-hidden="true">
-          <!-- Clock -->
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <div class="value-text">24 / 7 availability</div>
-        <div class="value-sub">no downtime, no holidays</div>
+        <div class="value-text">24/7</div>
+        <div class="value-sub">Always on, zero downtime</div>
       </div>
       <div class="value-item">
         <div class="value-icon" aria-hidden="true">
-          <!-- Globe -->
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
-        <div class="value-text">12+ languages</div>
-        <div class="value-sub">multilingual support</div>
+        <div class="value-text">12+</div>
+        <div class="value-sub">Languages supported</div>
       </div>
       <div class="value-item">
         <div class="value-icon" aria-hidden="true">
-          <!-- Shield -->
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="value-text">EU-aligned &amp; compliant</div>
-        <div class="value-sub">BiH data protection law</div>
+        <div class="value-text">100%</div>
+        <div class="value-sub">EU-aligned &amp; compliant</div>
       </div>
     </div>
   </div>
@@ -173,10 +179,8 @@
 
     <div class="services-grid">
 
-      <!-- AI Customer Support -->
       <article class="service-card reveal">
         <div class="service-icon" aria-hidden="true">
-          <!-- CPU / AI icon -->
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <rect x="9" y="9" width="6" height="6" rx="1"/>
             <path d="M15 2v3M9 2v3M15 19v3M9 19v3M22 9h-3M5 9H2M22 15h-3M5 15H2"/>
@@ -192,10 +196,8 @@
         </div>
       </article>
 
-      <!-- Human Agent Teams -->
       <article class="service-card reveal reveal-delay-1">
         <div class="service-icon" aria-hidden="true">
-          <!-- Headset -->
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
             <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
@@ -211,10 +213,8 @@
         </div>
       </article>
 
-      <!-- Omnichannel Inbox -->
       <article class="service-card reveal reveal-delay-2">
         <div class="service-icon" aria-hidden="true">
-          <!-- Layers -->
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <polygon points="12 2 2 7 12 12 22 7 12 2"/>
             <polyline points="2 17 12 22 22 17"/>
@@ -230,10 +230,8 @@
         </div>
       </article>
 
-      <!-- Back Office BPO -->
       <article class="service-card reveal reveal-delay-3">
         <div class="service-icon" aria-hidden="true">
-          <!-- Briefcase -->
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <rect x="2" y="7" width="20" height="14" rx="2"/>
             <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
@@ -277,7 +275,7 @@
       <div class="hiw-step reveal reveal-delay-1">
         <div class="step-num" aria-hidden="true">02</div>
         <h3>Embed the Widget</h3>
-        <p>Your team pastes a single <code style="font-size:.85em;background:var(--t-50);padding:.1em .35em;border-radius:3px;color:var(--t-700);">&lt;script&gt;</code> tag.
+        <p>Your team pastes a single <code>&lt;script&gt;</code> tag.
            A fully branded chat bubble appears on your site instantly — isolated, secure,
            and cross-origin sandboxed.</p>
       </div>
@@ -295,8 +293,8 @@
 </section>
 
 
-<!-- ── Features ───────────────────────────────────────────── -->
-<section class="section" aria-label="Features">
+<!-- ── Features (dark section) ────────────────────────────── -->
+<section class="section features-section" aria-label="Features">
   <div class="container">
     <div class="features-inner">
 
@@ -401,148 +399,114 @@
 </section>
 
 
-<!-- ── Pricing ────────────────────────────────────────────── -->
-<section class="section pricing-bg" id="pricing" aria-label="Pricing">
+<!-- ── Contact ─────────────────────────────────────────────── -->
+<section class="section contact-section" id="contact" aria-label="Contact us">
   <div class="container">
-    <p class="label">Pricing</p>
-    <h2>Transparent pricing,<br>no hidden fees</h2>
-    <p class="section-lead">
-      All plans include platform access, widget embed, and real-time reporting.
-      Human agents are included from Growth onwards.
-    </p>
+    <div class="contact-inner">
 
-    <div class="pricing-grid">
+      <!-- Left: details -->
+      <div class="contact-info">
+        <p class="label">Get in Touch</p>
+        <h2>Let's build something<br>great together</h2>
+        <p class="section-lead">
+          Tell us about your business and support needs. Our team responds
+          within one business day with a tailored proposal — no obligations.
+        </p>
 
-      <!-- Starter -->
-      <div class="plan-card reveal">
-        <div class="plan-name">Starter</div>
-        <div class="plan-price">€299<sub>/mo</sub></div>
-        <p class="plan-desc">For small businesses wanting AI-first support without the overhead of a full team.</p>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            1 partner integration
+        <ul class="contact-details">
+          <li class="contact-detail">
+            <div class="contact-detail-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-detail-label">Email</span>
+              <a href="mailto:hello@linkpointsolutions.ba" class="contact-detail-value">hello@linkpointsolutions.ba</a>
+            </div>
           </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            AI-only web chat support
+          <li class="contact-detail">
+            <div class="contact-detail-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-detail-label">Office</span>
+              <span class="contact-detail-value">Ferhadija 1, Sarajevo, BiH</span>
+            </div>
           </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Up to 2,000 conversations/mo
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Knowledge base (1 document)
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Partner dashboard
-          </li>
-          <li class="plan-feature dim">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Human agent escalation
-          </li>
-          <li class="plan-feature dim">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            WhatsApp integration
+          <li class="contact-detail">
+            <div class="contact-detail-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <span class="contact-detail-label">Response time</span>
+              <span class="contact-detail-value">Within 1 business day</span>
+            </div>
           </li>
         </ul>
-        <a href="#contact" class="btn btn-outline">Start Free Trial</a>
       </div>
 
-      <!-- Growth (highlighted) -->
-      <div class="plan-card highlighted reveal reveal-delay-1">
-        <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Growth</div>
-        <div class="plan-price">€799<sub>/mo</sub></div>
-        <p class="plan-desc">For growing companies that need the reliability of human agents alongside AI.</p>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Up to 5 partner integrations
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            AI + 3 dedicated human agents
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Up to 10,000 conversations/mo
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited knowledge base
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            WhatsApp Business channel
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Conversation flagging &amp; tagging
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Priority email &amp; chat support
-          </li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Start Free Trial</a>
-      </div>
+      <!-- Right: form -->
+      <form class="contact-form" id="contactForm" novalidate>
 
-      <!-- Enterprise -->
-      <div class="plan-card reveal reveal-delay-2">
-        <div class="plan-name">Enterprise</div>
-        <div class="plan-price" style="font-size:2rem;padding-top:.25rem;">Custom</div>
-        <p class="plan-desc">For organisations with high volumes, dedicated teams, and SLA requirements.</p>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited partner integrations
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Dedicated AI + human team
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited conversations
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            AI phone answering (Vapi)
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Custom API &amp; webhook access
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Guaranteed SLA
-          </li>
-          <li class="plan-feature">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Dedicated account manager
-          </li>
-        </ul>
-        <a href="#contact" class="btn btn-outline">Contact Sales</a>
-      </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+            <input class="form-input" id="cf-name" type="text" name="name"
+                   placeholder="Jane Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-email">Work Email <span aria-hidden="true">*</span></label>
+            <input class="form-input" id="cf-email" type="email" name="email"
+                   placeholder="jane@company.com" required autocomplete="email" />
+          </div>
+        </div>
 
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="cf-company">Company</label>
+            <input class="form-input" id="cf-company" type="text" name="company"
+                   placeholder="Your company" autocomplete="organization" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-service">Service Interest</label>
+            <select class="form-input form-select" id="cf-service" name="service">
+              <option value="" disabled selected>Select a service…</option>
+              <option value="ai-support">AI Customer Support</option>
+              <option value="human-agents">Human Agent Teams</option>
+              <option value="omnichannel">Omnichannel Inbox</option>
+              <option value="back-office">Back Office Operations</option>
+              <option value="full-platform">Full Platform</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label class="form-label" for="cf-message">Message <span aria-hidden="true">*</span></label>
+          <textarea class="form-input form-textarea" id="cf-message" name="message"
+                    placeholder="Tell us about your support volume, channels, and any specific requirements…"
+                    required rows="5"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg">
+            Send Message
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <span class="form-note">No spam. We respect your privacy.</span>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="status" hidden>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Thanks! We'll be in touch within one business day.
+        </div>
+
+      </form>
     </div>
-
-    <p class="pricing-note">
-      All prices exclusive of VAT. Need something different?
-      <a href="mailto:hello@linkpointsolutions.ba">Talk to our team</a> — we'll build a plan that fits.
-    </p>
   </div>
 </section>
 
 
 <!-- ── FAQ ────────────────────────────────────────────────── -->
-<section class="section" id="faq" aria-label="Frequently asked questions">
+<section class="section faq-section" id="faq" aria-label="Frequently asked questions">
   <div class="container">
     <p class="label">FAQ</p>
     <h2>Common questions</h2>
@@ -551,108 +515,50 @@
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            How does your AI handle customer questions?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            We use Anthropic's Claude model, trained on your uploaded knowledge base —
-            your FAQs, product documentation, and common technical problems with solutions.
-            When a customer sends a message, Claude retrieves relevant context, drafts a reply,
-            and applies a confidence threshold. High-confidence answers are sent automatically;
-            low-confidence queries are escalated to a human agent.
-          </p>
+          <summary class="faq-summary">How does your AI handle customer questions?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">We use Anthropic's Claude model, trained on your uploaded knowledge base — your FAQs, product documentation, and common technical problems with solutions. When a customer sends a message, Claude retrieves relevant context, drafts a reply, and applies a confidence threshold. High-confidence answers are sent automatically; low-confidence queries are escalated to a human agent.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            Can the AI be switched off for specific clients?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            Yes. Every partner company has an individual AI toggle on the platform.
-            Admins can enable or disable AI at any time without affecting other partners.
-            When AI is off, all conversations route directly to human agents.
-          </p>
+          <summary class="faq-summary">Can the AI be switched off for specific clients?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">Yes. Every partner company has an individual AI toggle on the platform. Admins can enable or disable AI at any time without affecting other partners. When AI is off, all conversations route directly to human agents.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            What happens when AI can't resolve a query?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            The AI informs the customer politely that a specialist will follow up, then
-            creates a ticket in our agent inbox. The assigned human agent receives full
-            conversation context and can continue the conversation or — if it was a
-            phone call — schedule a callback during business hours.
-          </p>
+          <summary class="faq-summary">What happens when AI can't resolve a query?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">The AI informs the customer politely that a specialist will follow up, then creates a ticket in our agent inbox. The assigned human agent receives full conversation context and can continue the conversation or — if it was a phone call — schedule a callback during business hours.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            How does the WhatsApp integration work?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            We connect to the Meta WhatsApp Cloud API using your verified Business Account.
-            Inbound customer messages flow into the same unified inbox as web chat.
-            Service conversations (customer-initiated within 24 hours) are free on Meta's
-            infrastructure. Template messages (outbound notifications) are charged at Meta's
-            standard rates per category and country.
-          </p>
+          <summary class="faq-summary">How does the WhatsApp integration work?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">We connect to the Meta WhatsApp Cloud API using your verified Business Account. Inbound customer messages flow into the same unified inbox as web chat. Service conversations (customer-initiated within 24 hours) are free on Meta's infrastructure. Template messages (outbound notifications) are charged at Meta's standard rates per category and country.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            Is customer data secure and compliant?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            Yes. All data is encrypted in transit (TLS 1.2+) and at rest. We operate under
-            the Law on Protection of Personal Data of Bosnia and Herzegovina (Official Gazette
-            49/06, 76/11, 89/11), which follows EU Directive 95/46/EC principles. The platform
-            uses cross-origin sandboxed iframes with no <code>allow-same-origin</code> so your
-            customers' conversation data cannot be accessed by the host page.
-          </p>
+          <summary class="faq-summary">Is customer data secure and compliant?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">Yes. All data is encrypted in transit (TLS 1.2+) and at rest. We operate under the Law on Protection of Personal Data of Bosnia and Herzegovina (Official Gazette 49/06, 76/11, 89/11), which follows EU Directive 95/46/EC principles. The platform uses cross-origin sandboxed iframes so your customers' conversation data cannot be accessed by the host page.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            How long does onboarding take?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            For most clients, the platform is live within one business day. We create your
-            partner profile, ingest your knowledge base, and generate your embed snippet —
-            which your team pastes into your website's HTML. WhatsApp and phone integrations
-            require Meta Business verification and Vapi configuration, which typically adds
-            3–5 business days.
-          </p>
+          <summary class="faq-summary">How long does onboarding take?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">For most clients, the platform is live within one business day. We create your partner profile, ingest your knowledge base, and generate your embed snippet — which your team pastes into your website's HTML. WhatsApp and phone integrations require Meta Business verification and Vapi configuration, which typically adds 3–5 business days.</p>
         </details>
       </div>
 
       <div class="faq-item">
         <details class="faq-details">
-          <summary class="faq-summary">
-            Are there long-term contracts?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <p class="faq-answer">
-            No. All plans are billed monthly and can be cancelled at any time with 30 days'
-            notice. Enterprise clients may negotiate annual pricing for a discount. There are
-            no setup fees and no lock-in penalties.
-          </p>
+          <summary class="faq-summary">Are there long-term contracts?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <p class="faq-answer">No. All plans are billed monthly and can be cancelled at any time with 30 days' notice. Enterprise clients may negotiate annual pricing for a discount. There are no setup fees and no lock-in penalties.</p>
         </details>
       </div>
 
@@ -666,21 +572,20 @@
   <div class="container">
     <h2>Ready to transform your<br>customer experience?</h2>
     <p>Start with a free 14-day trial — no credit card required, no commitments.
-       Our team will handle the setup.</p>
+       Our team will handle the entire setup.</p>
     <div class="cta-actions">
-      <a href="mailto:hello@linkpointsolutions.ba" class="btn btn-primary btn-lg">Start Free Trial</a>
-      <a href="mailto:hello@linkpointsolutions.ba" class="btn btn-ghost btn-lg">Schedule a Demo</a>
+      <a href="#contact" class="btn btn-primary btn-lg">Start Free Trial</a>
+      <a href="#contact" class="btn btn-ghost btn-lg">Schedule a Demo</a>
     </div>
   </div>
 </section>
 
 
 <!-- ── Footer ─────────────────────────────────────────────── -->
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
 
-      <!-- Brand -->
       <div class="footer-brand">
         <div class="footer-brand-logo">
           <svg width="26" height="24" viewBox="0 0 30 28" fill="none" aria-hidden="true">
@@ -702,7 +607,6 @@
         </address>
       </div>
 
-      <!-- Services -->
       <div>
         <div class="footer-col-head">Services</div>
         <ul class="footer-links">
@@ -713,18 +617,15 @@
         </ul>
       </div>
 
-      <!-- Company -->
       <div>
         <div class="footer-col-head">Company</div>
         <ul class="footer-links">
           <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
-          <li><a href="#pricing" class="footer-link">Pricing</a></li>
-          <li><a href="#faq" class="footer-link">FAQ</a></li>
-          <li><a href="mailto:hello@linkpointsolutions.ba" class="footer-link">Contact Us</a></li>
+          <li><a href="#faq"          class="footer-link">FAQ</a></li>
+          <li><a href="#contact"      class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
-      <!-- Legal -->
       <div>
         <div class="footer-col-head">Legal</div>
         <ul class="footer-links">
@@ -752,14 +653,25 @@
 (function () {
   'use strict';
 
-  /* Nav scroll effect */
+  /* ── Theme toggle ───────────────────────────────────────── */
+  var html        = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('lp_theme', next);
+    });
+  }
+
+  /* ── Nav scroll ─────────────────────────────────────────── */
   var nav = document.getElementById('mainNav');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 60) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   }, { passive: true });
 
-  /* Mobile drawer */
+  /* ── Mobile drawer ──────────────────────────────────────── */
   var toggle = document.getElementById('navToggle');
   var drawer = document.getElementById('navDrawer');
   if (toggle && drawer) {
@@ -777,33 +689,52 @@
     });
   }
 
-  /* Cookie consent */
+  /* ── Cookie consent ─────────────────────────────────────── */
   var bar     = document.getElementById('cookieBar');
   var accept  = document.getElementById('cookieAccept');
   var decline = document.getElementById('cookieDecline');
   if (bar) {
-    if (localStorage.getItem('lp_consent')) {
-      bar.classList.add('hide');
-    }
-    if (accept) accept.addEventListener('click', function () {
-      localStorage.setItem('lp_consent', 'accepted');
-      bar.classList.add('hide');
-    });
-    if (decline) decline.addEventListener('click', function () {
-      localStorage.setItem('lp_consent', 'declined');
-      bar.classList.add('hide');
+    if (localStorage.getItem('lp_consent')) bar.classList.add('hide');
+    if (accept)  accept.addEventListener('click',  function () { localStorage.setItem('lp_consent', 'accepted');  bar.classList.add('hide'); });
+    if (decline) decline.addEventListener('click', function () { localStorage.setItem('lp_consent', 'declined'); bar.classList.add('hide'); });
+  }
+
+  /* ── Contact form ───────────────────────────────────────── */
+  var contactForm = document.getElementById('contactForm');
+  var formSuccess = document.getElementById('formSuccess');
+  if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameF    = contactForm.querySelector('#cf-name');
+      var emailF   = contactForm.querySelector('#cf-email');
+      var messageF = contactForm.querySelector('#cf-message');
+      var valid    = true;
+
+      [nameF, emailF, messageF].forEach(function (f) {
+        f.style.borderColor = '';
+        if (!f.value.trim()) { f.style.borderColor = '#f87171'; valid = false; }
+      });
+      if (emailF.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailF.value)) {
+        emailF.style.borderColor = '#f87171'; valid = false;
+      }
+      if (!valid) return;
+
+      var btn = contactForm.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.style.opacity = '.55'; }
+      formSuccess.hidden = false;
+      contactForm.reset();
+      setTimeout(function () {
+        if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+      }, 6000);
     });
   }
 
-  /* Scroll reveal (Intersection Observer) */
+  /* ── Scroll reveal ──────────────────────────────────────── */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(function (el) { io.observe(el); });
